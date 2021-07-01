@@ -1,2 +1,2 @@
 # mpa-spa-hybrid
-WIP: Random description
+WIP: Random description (updated)
