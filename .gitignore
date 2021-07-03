@@ -1,8 +1,11 @@
 .DS_Store
 node_modules
 
+# Ignore PHP composer 
+/live/vendor/
+
 # Ignore the deployed vue app
-/live/mpa
+/live/mpa/
 
 # local env files
 /mpa/.env.local

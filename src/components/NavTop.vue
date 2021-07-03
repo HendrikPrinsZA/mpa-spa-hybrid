@@ -11,7 +11,9 @@
 
     <v-badge bordered color="error" icon="mdi-exit-to-app" class="mr-3">
       <v-btn color="error" flat>
-        John Doe
+        <span v-if="appData.profile">
+          {{ appData.profile.firstname }} {{ appData.profile.lastname }}
+        </span>
       </v-btn>
     </v-badge>
   </v-app-bar>
@@ -19,7 +21,11 @@
 
 <script>
 export default {
-  name: 'NavTop'
+  name: 'NavTop',
+
+  props: [
+    'appData'
+  ]
 }
 </script>
 
