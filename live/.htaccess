@@ -1,0 +1,15 @@
+# Options -Indexes
+
+# RewriteEngine On
+
+# Ignore redirect to index.php for docs/
+# RewriteRule ^(docs)($|/) - [L]
+
+# Redirect everything to index.php (except docs/)
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^ index.php [QSA,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
