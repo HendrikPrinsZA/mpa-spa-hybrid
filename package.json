@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "cd mpa && vue-cli-service serve",
-    "build": "cd mpa && vue-cli-service build mpa",
-    "lint": "cd mpa && vue-cli-service lint mpa"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",

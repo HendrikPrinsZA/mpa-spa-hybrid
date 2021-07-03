@@ -1,9 +1,9 @@
 {
   "include": [
-    "./mpa/src/**/*"
+    "./src/**/*"
   ],
   "exclude": [
-    "./mpa/src/boot.js"
+    "./src/boot.js"
   ],
   "compilerOptions": {
     "outDir": "./compiled",

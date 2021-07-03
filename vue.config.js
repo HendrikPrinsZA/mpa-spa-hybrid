@@ -4,7 +4,7 @@ module.exports = {
   ],
 
   publicPath: '/mpa/',
-  outputDir: '../live/mpa',
+  outputDir: 'live/mpa',
 
   pages: {
     index: {
