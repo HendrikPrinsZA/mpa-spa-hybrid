@@ -5,7 +5,7 @@ node_modules
 /live/vendor/
 
 # Ignore the deployed vue app
-/live/mpa/
+/live/spa/
 
 # local env files
 /mpa/.env.local

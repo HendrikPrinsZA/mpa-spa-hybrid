@@ -35,6 +35,6 @@ export default {
   async mounted() {
     await this.loadAppData()
     this.hasLoaded = true
-  },
+  }
 }
 </script>

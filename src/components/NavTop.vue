@@ -1,16 +1,16 @@
 <template>
   <v-app-bar density="compact">
-    <v-app-bar-title to="/">Vuetify</v-app-bar-title>
+    <v-app-bar-title>SPA</v-app-bar-title>
     
     <v-spacer></v-spacer>
 
-    <v-btn link to="/dashboard">Dashboard</v-btn>
+    <v-btn :href="hrefDashboard">Dashboard</v-btn>
     <v-btn to="/accounts" class="mr-3">Accounts</v-btn>
 
     <v-divider inset vertical></v-divider>
 
     <v-badge bordered color="error" icon="mdi-exit-to-app" class="mr-3">
-      <v-btn color="error" flat>
+      <v-btn :href="hrefLogout" color="error" flat>
         <span v-if="appData.profile">
           {{ appData.profile.firstname }} {{ appData.profile.lastname }}
         </span>
@@ -25,7 +25,24 @@ export default {
 
   props: [
     'appData'
-  ]
+  ],
+
+  computed: {
+
+    hrefDashboard() {
+      if (process.env.NODE_ENV === 'production') {
+        return process.env.VUE_APP_MPA_HOST + '/mpa/dashboard.php'  
+      }
+      return process.env.VUE_APP_MPA_HOST + '/mpa/dashboard.php?SPA_HOST=' + encodeURI(window.location.origin)
+    },
+
+    hrefLogout() {
+      if (process.env.NODE_ENV === 'production') {
+        return process.env.VUE_APP_MPA_HOST + '/mpa/login.php?logout'
+      }
+      return process.env.VUE_APP_MPA_HOST + '/mpa/login.php?logout&SPA_HOST=' + encodeURI(window.location.origin)
+    }
+  }
 }
 </script>
 

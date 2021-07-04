@@ -3,8 +3,8 @@ module.exports = {
     'vuetify'
   ],
 
-  publicPath: '/mpa/',
-  outputDir: 'live/mpa',
+  publicPath: '/spa/',
+  outputDir: 'live/spa',
 
   pages: {
     index: {
@@ -25,7 +25,7 @@ module.exports = {
 
     proxy: {
       '^/api': {
-        target: process.env.VUE_APP_HOST,
+        target: process.env.VUE_APP_MPA_HOST,
         changeOrigin: true,
         logLevel: 'debug' 
       }
