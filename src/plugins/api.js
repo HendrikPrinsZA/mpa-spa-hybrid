@@ -3,19 +3,18 @@ import axios from "axios"
 import qs from 'qs'
 
 const api = axios.create({
-  baseURL: '../api/',
-  headers: {
-    'Content-type': 'application/json'
-  }
+  baseURL: '../api/'
 })
 
 api.interceptors.request.use(function (config) {
-  if (config.method !== 'get'){
+  if (config.method === 'get'){
+    config.headers['Content-Type'] = 'application/json';
+  } else {
+    config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
     config.data = qs.stringify(config.data);
   }
-  config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
   return config;
-},function (error) {
+}, function (error) {
   return Promise.reject(error)
 });
 
