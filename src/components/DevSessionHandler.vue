@@ -40,7 +40,7 @@ export default {
 
   data: () => ({
     loading: false,
-    hrefLogin: process.env.VUE_APP_MPA_HOST,
+    hrefLogin: process.env.VUE_APP_MPA_HOST + '/mpa/login.php',
     hrefSessionid: process.env.VUE_APP_MPA_HOST + '/api/dev/sessionid',
     session: {},
     sessionid: null,
