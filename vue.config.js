@@ -3,9 +3,6 @@ module.exports = {
     'vuetify'
   ],
 
-  publicPath: process.env.VUE_APP_MPA_PATH ?? '/spa/',
-  outputDir: 'live/spa',
-
   pages: {
     index: {
       entry: 'src/main.js',
@@ -13,6 +10,9 @@ module.exports = {
       title: process.env.VUE_APP_TITLE
     }
   },
+
+  publicPath: process.env.VUE_APP_MPA_PATH ?? '/spa/',
+  outputDir: 'live/spa',
 
   devServer: {
 
