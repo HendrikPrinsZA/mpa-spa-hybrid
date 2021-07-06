@@ -12,7 +12,7 @@
     <v-badge bordered color="error" icon="mdi-exit-to-app" class="mr-3">
       <v-btn :href="hrefLogout" color="error" flat>
         <span v-if="appData.profile">
-          {{ appData.profile.firstname }} {{ appData.profile.lastname }}
+          {{ appData.profile.username }}
         </span>
       </v-btn>
     </v-badge>

@@ -54,9 +54,9 @@ $app->group('', function (RouteCollectorProxy $group) {
   $group->get('/app', function (Request $request, Response $response, $args) {
     $data = [
       'profile' => [
-        'firstname' => 'John',
-        'lastname' => 'Doe'
-      ]
+        'username' => $_SESSION['username'] ?? null
+      ],
+      'session' => $_SESSION
     ];
     $payload = json_encode($data);
   

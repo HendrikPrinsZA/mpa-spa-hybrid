@@ -55,7 +55,7 @@ require_once "config.php";
                 >
                   <div class="v-btn__overlay"></div>
                   <div class="v-btn__underlay"></div>
-                  <span data-v-128da662="">John Doe</span>
+                  <span data-v-128da662=""><?= $_SESSION['username']; ?></span>
                 </button>
                 <span class="btn-logout-icon v-badge__badge bg-error" aria-atomic="true" aria-label="locale string here" aria-live="polite" role="status" style="inset: auto auto calc(100% - 12px) calc(100% - 12px);">
                   <i class="mdi-exit-to-app mdi v-icon notranslate v-icon--size-default" aria-hidden="true"></i>
@@ -76,9 +76,5 @@ require_once "config.php";
       </div>
     </div>
   </div>
-
-  <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
-  <!-- <script type="text/javascript" src="../spa/js/chunk-vendors.079982ef.js"></script> -->
-  <!-- <script type="text/javascript" src="../spa/js/index.851c78a4.js"></script> -->
 </body>
 </html>

@@ -27,7 +27,7 @@ api.interceptors.response.use(function (response) {
   }, function (error) {
     if (error.response.status === 401) {
       if (process.env.NODE_ENV === 'production') {
-        window.location.href = "/logon/";
+        window.location.href = "../mpa/login.php";
       }
     }
     return Promise.reject(error);
