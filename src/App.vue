@@ -4,10 +4,12 @@
         <v-progress-circular indeterminate size="64"></v-progress-circular>
     </v-overlay>
     
-    <NavTop :appData="appData"/>
-    <v-main>
-      <router-view/>
-    </v-main>
+    <div v-if="!isLoading">
+      <NavTop :appData="appData"/>
+      <v-main>
+        <router-view/>
+      </v-main>
+    </div>
     <DevSessionHandler v-if="devMode"/>
   </v-app>
   

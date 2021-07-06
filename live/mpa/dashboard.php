@@ -69,7 +69,57 @@ require_once "config.php";
         <main class="v-main" style="position: relative; padding: 48px 0px 0px;">
           <div class="v-main__wrap">
             <div class="v-container">
-              <h1>This is the dashboard page</h1>
+              <div class="v-card v-theme--light v-card--density-default elevation-10 v-card--variant-contained ma-10">
+                <div class="v-card__underlay"></div>
+                <div class="v-card-header">
+                  <div class="v-card-header-text">
+                    <div class="v-card-title">Dashboard item 1</div>
+                    <div class="v-card-subtitle">Description of dashboard item 1</div>
+                  </div>
+                </div>
+                <div class="v-card-actions">
+                  <button type="button"
+                    class="v-btn v-theme--light v-btn--density-default v-btn--rounded v-btn--size-default v-btn--variant-outlined"
+                    text="">
+                    <div class="v-btn__overlay"></div>
+                    <div class="v-btn__underlay"></div>Button
+                  </button>
+                </div>
+              </div>
+              <div class="v-card v-theme--light v-card--density-default elevation-10 v-card--variant-contained ma-10">
+                <div class="v-card__underlay"></div>
+                <div class="v-card-header">
+                  <div class="v-card-header-text">
+                    <div class="v-card-title">Dashboard item 2</div>
+                    <div class="v-card-subtitle">Description of dashboard item 2</div>
+                  </div>
+                </div>
+                <div class="v-card-actions">
+                  <button type="button"
+                    class="v-btn v-theme--light v-btn--density-default v-btn--rounded v-btn--size-default v-btn--variant-outlined"
+                    text="">
+                    <div class="v-btn__overlay"></div>
+                    <div class="v-btn__underlay"></div>Button
+                  </button>
+                </div>
+              </div>
+              <div class="v-card v-theme--light v-card--density-default elevation-10 v-card--variant-contained ma-10">
+                <div class="v-card__underlay"></div>
+                <div class="v-card-header">
+                  <div class="v-card-header-text">
+                    <div class="v-card-title">Dashboard item 3</div>
+                    <div class="v-card-subtitle">Description of dashboard item 3</div>
+                  </div>
+                </div>
+                <div class="v-card-actions">
+                  <button type="button"
+                    class="v-btn v-theme--light v-btn--density-default v-btn--rounded v-btn--size-default v-btn--variant-outlined"
+                    text="">
+                    <div class="v-btn__overlay"></div>
+                    <div class="v-btn__underlay"></div>Button
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </main>
