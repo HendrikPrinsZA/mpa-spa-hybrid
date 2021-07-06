@@ -15,6 +15,6 @@ define('SPA_HOST', $_SESSION['SPA_HOST'] ?? '..');
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   // logged in, all good
 } else {
-  header("location: /mpa/login.php");
+  header("location: ../mpa/login.php");
   exit;
 }

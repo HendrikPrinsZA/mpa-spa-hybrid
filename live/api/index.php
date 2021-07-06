@@ -8,27 +8,28 @@ use Slim\Routing\RouteCollectorProxy;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+// Constants
+define('LOCAL', strpos($_SERVER['SERVER_NAME'], 'local') !== false);
+
+// Create the SLIM api
 $app = AppFactory::create();
-
-// Define Custom Error Handler
-$customErrorHandler = function (ServerRequestInterface $request, Throwable $exception) use ($app) {
-
-  if ($exception->getCode()) {
-    $response = $app->getResponseFactory()->createResponse();
-    return $response->withStatus(404)->withHeader('Location', '../mpa/dashboard.php');
-  }
-
-};
-
-$errorMiddleware = $app->addErrorMiddleware(true,true,true);
-$errorMiddleware->setDefaultErrorHandler($customErrorHandler);
 
 // Dynamically set the base path 
 $basePath = str_replace('/index.php', '', $_SERVER['PHP_SELF']);
 $app->setBasePath($basePath);
 
-// Constants
-define('LOCAL', strpos($_SERVER['SERVER_NAME'], 'local') !== false);
+// Redirect user to the mpa dashboard
+$customErrorHandler = function (ServerRequestInterface $request, Throwable $exception) use ($app) {
+  
+  if ($exception->getCode()) {
+    $response = $app->getResponseFactory()->createResponse();
+    $location = $_SERVER['REQUEST_URI'].'mpa/dashboard.php'; 
+    return $response->withStatus(404)->withHeader('Location', $location);
+  }
+
+};
+$errorMiddleware = $app->addErrorMiddleware(true,true,true);
+$errorMiddleware->setDefaultErrorHandler($customErrorHandler);
 
 // Simple auth middleware
 $authMiddleware = function (Request $request, RequestHandler $handler) {
@@ -47,6 +48,7 @@ $authMiddleware = function (Request $request, RequestHandler $handler) {
 
 };
 
+// Main routes
 $app->group('', function (RouteCollectorProxy $group) {
   
   $group->get('/app', function (Request $request, Response $response, $args) {
