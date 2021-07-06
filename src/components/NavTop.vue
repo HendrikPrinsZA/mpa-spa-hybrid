@@ -30,17 +30,17 @@ export default {
   computed: {
 
     hrefDashboard() {
-      if (process.env.NODE_ENV === 'production') {
-        return process.env.VUE_APP_MPA_HOST + '/mpa/dashboard.php'  
+      if (process.env.NODE_ENV !== 'production') {
+        return process.env.VUE_APP_MPA_HOST + '/mpa/dashboard.php?SPA_HOST=' + encodeURI(window.location.origin)
       }
-      return process.env.VUE_APP_MPA_HOST + '/mpa/dashboard.php?SPA_HOST=' + encodeURI(window.location.origin)
+      return '../mpa/dashboard.php'
     },
 
     hrefLogout() {
-      if (process.env.NODE_ENV === 'production') {
-        return process.env.VUE_APP_MPA_HOST + '/mpa/login.php?logout'
+      if (process.env.NODE_ENV !== 'production') {
+        return process.env.VUE_APP_MPA_HOST + '/mpa/login.php?logout&SPA_HOST=' + encodeURI(window.location.origin)
       }
-      return process.env.VUE_APP_MPA_HOST + '/mpa/login.php?logout&SPA_HOST=' + encodeURI(window.location.origin)
+      return '../mpa/login.php?logout'
     }
   }
 }

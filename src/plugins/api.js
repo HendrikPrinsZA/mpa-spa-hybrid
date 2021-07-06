@@ -2,8 +2,12 @@ import 'es6-promise/auto'
 import axios from "axios"
 import qs from 'qs'
 
+let baseUrl = '../api/'
+if (process.env.VUE_APP_MPA_HOST && process.env.VUE_APP_MPA_PATH) {
+  baseUrl = process.env.VUE_APP_MPA_HOST + process.env.VUE_APP_MPA_PATH + '/../../api/'
+}
 const api = axios.create({
-  baseURL: '../api/'
+  baseURL: baseUrl
 })
 
 api.interceptors.request.use(function (config) {
