@@ -1,5 +1,9 @@
 <template>
   <v-app id="app">
+    <v-overlay :value="isLoading">
+        <v-progress-circular indeterminate size="64"></v-progress-circular>
+    </v-overlay>
+    
     <NavTop :appData="appData"/>
     <v-main>
       <router-view/>
@@ -29,7 +33,7 @@ export default {
   computed: {
         
     // Map the store's state `appData`
-    ...mapGetters(['appData'])
+    ...mapGetters(['appData', 'isLoading'])
 
   },
 
@@ -42,7 +46,6 @@ export default {
 
   async mounted() {
     await this.loadAppData()
-    this.hasLoaded = true
   }
 }
 </script>
