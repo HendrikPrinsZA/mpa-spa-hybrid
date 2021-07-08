@@ -44,7 +44,7 @@ require_once "config.php";
               
             </a>
             <hr class="v-divider v-divider--inset v-divider--vertical v-theme--light" aria-orientation="vertical"
-              role="separator" data-v-128da662="">
+              role="separator" data-v-128da662="" style="border-width: 0;">
 
             <a href="login.php?logout" class="v-badge v-badge--bordered mr-3" data-v-128da662="">
               <div class="v-badge__wrapper">
