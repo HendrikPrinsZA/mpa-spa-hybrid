@@ -1,4 +1,5 @@
 # [MPA SPA Hybrid](https://hendrikprinsloo.co.za/projects/mpa-spa-hybrid/)
+Migrate your Multi-Page Application to a Single-Page Application
 
 ![Product Gif](_docs/mpa-spa-hybrid-preview-min.png)
 
