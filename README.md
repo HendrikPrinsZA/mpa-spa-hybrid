@@ -5,7 +5,7 @@ Migrate your Multi-Page Application to a Single-Page Application
 
 **Multi-Page App + Single-Page App Hybrid** is an example application that is not meant as a kickstarter template. Reference the source code for an idea of how to migrate your legacy application to modern technology.
 
-See this article for a detailed overview: [Migrate your Multi-Page Application to a Single-Page Application](https://hendrikprinsza.medium.com/migrate-your-multi-page-application-to-a-single-page-application-a16863d6249f)
+See this article for a detailed overview: [Migrate your Multi-Page Application to a Single-Page Application](https://javascript.plainenglish.io/migrate-your-multi-page-application-to-a-single-page-application-a16863d6249f)
 ## Getting Started
 ### Dependencies
 - Install Nodejs from [Nodejs Official Page](https://nodejs.org/en/)
